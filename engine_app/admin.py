@@ -1,3 +1,5 @@
 from django.contrib import admin
+from engine_app.models import Feedback, Project
 
-# Register your models here.
+admin.site.register(Feedback)
+admin.site.register(Project)
