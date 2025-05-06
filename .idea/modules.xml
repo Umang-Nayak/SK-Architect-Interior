@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/sk_interior.iml" filepath="$PROJECT_DIR$/.idea/sk_interior.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SK-Architect-Interior.iml" filepath="$PROJECT_DIR$/.idea/SK-Architect-Interior.iml" />
     </modules>
   </component>
 </project>
