@@ -206,26 +206,28 @@ $(document).ready(function() {
     });
 
     $('.active-brand-carusel').owlCarousel({
-        items: 5,
-        loop: true,
-        autoplayHoverPause: true,
-        smartSpeed:500,        
-        autoplay: true,
-        responsive: {
-            0: {
-                items: 2
-            },
-            768: {
-                items: 3,
-            },
-            991: {
-                items: 4,
-            },
-            1024: {
-                items: 5,
-            }
+    items: 5,
+    loop: true,
+    autoplay: true,
+    autoplayHoverPause: false,
+    autoplayTimeout: 1, // Almost no delay
+    smartSpeed: 1000, // Slow smooth transition
+    responsive: {
+        0: {
+            items: 2
+        },
+        768: {
+            items: 3,
+        },
+        991: {
+            items: 4,
+        },
+        1024: {
+            items: 5,
         }
-    });
+    }
+});
+
 
     //------- Timer Countdown  js --------//  
 

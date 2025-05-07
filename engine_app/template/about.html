@@ -38,12 +38,9 @@
                             We transform residential and commercial exterior and interiors into inspiring environments.
                         </span>
                     </p>
-                    <a class="primary-btn mt-30" href="#">Get Started Now</a>
                 </div>
                 <div class="col-lg-6 about-video-right justify-content-center align-items-center d-flex relative">
-                    <div class="overlay overlay-bg"></div>
-                    <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img
-                            class="img-fluid mx-auto" src="img/play-btn.png" alt=""></a>
+                        <img src="{% static 'img/home-banner.png' %}" alt="">
                 </div>
             </div>
         </div>
@@ -179,248 +176,80 @@
     <!-- End testimonial Area -->
 
 
-    <section class="testimonial-area pt-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-8">
-                    <h3 class="mb-30">Feedback Form</h3>
-                    <form method="post" action="/create_user_feedback/">
-                        {% csrf_token %}
-                        <div class="mt-10">
-                            <input type="text" name="user_name" placeholder="Your Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Full Name'" required class="single-input">
-                        </div>
-                        <div class="input-group-icon mt-10">
-                            <div class="icon">Rate</div>
-                            <div class="form-select" id="default-select">
-                                <select name="rating">
-                                    <option value="5">⭐⭐⭐⭐⭐</option>
-                                    <option value="4">⭐⭐⭐⭐</option>
-                                    <option value="3">⭐⭐⭐</option>
-                                    <option value="2">⭐⭐</option>
-                                    <option value="1">⭐</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="mt-10">
-                            <textarea name="comment" class="single-textarea" placeholder="Add Comment" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Add Comment'" required></textarea>
-                        </div>
-                        <div class="mt-10">
-                            <input type="text" name="user_phone_number" placeholder="Your Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'" required class="single-input">
-                        </div>
-                        <div class="button-group-area mt-10">
-                            <button type="submit" class="genric-btn primary-border">SUBMIT</button>
-                        </div>
-                    </form>
-                </div>
+<section
+  class="d-flex justify-content-center align-items-center"
+  style="background-color: #ffffff; padding-top: 120px; padding-bottom: 120px; min-height: 100vh;"
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="p-4 rounded shadow-sm" style="background-color: #ffffff;">
+            <h1 class="text-center mb-4">Feedback Form</h1>
+          <form method="post" action="/create_user_feedback/">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="user_name" class="form-label" style="color: #333333;">Your Full Name</label>
+              <input
+                type="text" id="user_name" name="user_name"
+                class="form-control" placeholder="Your Name" required
+                style="border-radius: .5rem; border: 1px solid #ccc;"
+              >
             </div>
+            <div class="mb-3">
+              <label for="rating" class="form-label" style="color: #333333;">Rate Us</label>
+              <select
+                id="rating" name="rating" class="form-select"
+                style="border-radius: .5rem; border: 1px solid #ccc;"
+              >
+                <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                <option value="4">⭐⭐⭐⭐ - Good</option>
+                <option value="3">⭐⭐⭐ - Average</option>
+                <option value="2">⭐⭐ - Poor</option>
+                <option value="1">⭐ - Very Poor</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="comment" class="form-label" style="color: #333333;">Add Comment</label>
+              <textarea
+                id="comment" name="comment" class="form-control"
+                placeholder="Write your feedback..." rows="4" required
+                style="border-radius: .5rem; border: 1px solid #ccc;"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="user_phone_number" class="form-label" style="color: #333333;">Your Phone Number</label>
+              <input
+                type="text" id="user_phone_number" name="user_phone_number"
+                class="form-control" placeholder="+91 XXXXXXXXXX" required
+                style="border-radius: .5rem; border: 1px solid #ccc;"
+              >
+            </div>
+            <div class="d-grid">
+              <button
+                type="submit"
+                class="btn"
+                style="background-color: #ffb182; border-color: #ffb182; color: #ffffff; border-radius: .5rem;"
+              >
+                SUBMIT
+              </button>
+            </div>
+          </form>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
     <!-- Start callto-action Area -->
-    <section class="callto-action-area pt-120">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="callto-action-wrap col-lg-12 relative section-gap">
-                    <div class="content">
-                        <h1>
-                            Looking for a <br>
-                            quality and affordable interior design?
-                        </h1>
-                        <p class="mx-auto">
-                            inappropriate behavior is often laughed off as “boys will be boys,” women face higher
-                            conduct standards especially in the workplace.
-                        </p>
-                        <a href="#" class="primary-btn text-uppercase">Request quote now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- End callto-action Area -->
 
     <!-- Start blog Area -->
-    <section class="blog-area section-gap">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="menu-content pb-60 col-lg-9">
-                    <div class="title text-center">
-                        <h1 class="mb-10">Ongoing Exhibitions from the scratch</h1>
-                        <p>Who are in extremely love with eco friendly system.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="active-blog-carusel">
-                    <div class="single-blog-post item">
-                        <div class="thumb">
-                            <img class="img-fluid" src="img/b1.jpg" alt="">
-                        </div>
-                        <div class="details">
-                            <div class="tags">
-                                <ul>
-                                    <li>
-                                        <a href="#">Travel</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Life Style</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <a href="#"><h4 class="title">Low Cost Advertising</h4></a>
-                            <p>
-                                Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A
-                                farmer.
-                            </p>
-                            <h6 class="date">31st January,2018</h6>
-                        </div>
-                    </div>
-                    <div class="single-blog-post item">
-                        <div class="thumb">
-                            <img class="img-fluid" src="img/b2.jpg" alt="">
-                        </div>
-                        <div class="details">
-                            <div class="tags">
-                                <ul>
-                                    <li>
-                                        <a href="#">Travel</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Life Style</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <a href="#"><h4 class="title">Creative Outdoor Ads</h4></a>
-                            <p>
-                                Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A
-                                farmer.
-                            </p>
-                            <h6 class="date">31st January,2018</h6>
-                        </div>
-                    </div>
-                    <div class="single-blog-post item">
-                        <div class="thumb">
-                            <img class="img-fluid" src="img/b3.jpg" alt="">
-                        </div>
-                        <div class="details">
-                            <div class="tags">
-                                <ul>
-                                    <li>
-                                        <a href="#">Travel</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Life Style</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <a href="#"><h4 class="title">It's Classified How To Utilize Free</h4></a>
-                            <p>
-                                Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A
-                                farmer.
-                            </p>
-                            <h6 class="date">31st January,2018</h6>
-                        </div>
-                    </div>
-                    <div class="single-blog-post item">
-                        <div class="thumb">
-                            <img class="img-fluid" src="img/b1.jpg" alt="">
-                        </div>
-                        <div class="details">
-                            <div class="tags">
-                                <ul>
-                                    <li>
-                                        <a href="#">Travel</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Life Style</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <a href="#"><h4 class="title">Low Cost Advertising</h4></a>
-                            <p>
-                                Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A
-                                farmer.
-                            </p>
-                            <h6 class="date">31st January,2018</h6>
-                        </div>
-                    </div>
-                    <div class="single-blog-post item">
-                        <div class="thumb">
-                            <img class="img-fluid" src="img/b2.jpg" alt="">
-                        </div>
-                        <div class="details">
-                            <div class="tags">
-                                <ul>
-                                    <li>
-                                        <a href="#">Travel</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Life Style</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <a href="#"><h4 class="title">Creative Outdoor Ads</h4></a>
-                            <p>
-                                Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A
-                                farmer.
-                            </p>
-                            <h6 class="date">31st January,2018</h6>
-                        </div>
-                    </div>
-                    <div class="single-blog-post item">
-                        <div class="thumb">
-                            <img class="img-fluid" src="img/b3.jpg" alt="">
-                        </div>
-                        <div class="details">
-                            <div class="tags">
-                                <ul>
-                                    <li>
-                                        <a href="#">Travel</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Life Style</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <a href="#"><h4 class="title">It's Classified How To Utilize Free</h4></a>
-                            <p>
-                                Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A
-                                farmer.
-                            </p>
-                            <h6 class="date">31st January,2018</h6>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- End blog Area -->
 
     <!-- Start brands Area -->
-    <section class="brands-area pb-60 pt-60">
-        <div class="container no-padding">
-            <div class="brand-wrap">
-                <div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l1.png" alt=""></a>
-                    </div>
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l2.png" alt=""></a>
-                    </div>
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l3.png" alt=""></a>
-                    </div>
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l4.png" alt=""></a>
-                    </div>
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l5.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- End brands Area -->
 
 {% endblock %}

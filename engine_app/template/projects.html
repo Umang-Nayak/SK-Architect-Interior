@@ -31,57 +31,38 @@
                 </div>
             </div>
             <div class="row">
-
                 {% for data in projects %}
-
-                <div class="col-lg-8">
-                    <div class="single-gallery">
-                        <div class="content">
-                            <a href="#" target="_blank">
-                                <div class="content-overlay"></div>
-                                <img class="content-image img-fluid d-block mx-auto" src="{{ data.project_image.url }}" alt="{{ data.name }}">
-                                <div class="content-details fadeIn-bottom">
-                                    <h3 class="content-title mx-auto">{{ data.name }}</h3>
-                                    <a href="/project_information/{{data.id}}" class="primary-btn text-uppercase mt-20">
-                                        More Detail
-                                    </a>
-                                </div>
-                            </a>
+                    <div class="col-lg-8 mx-auto">
+                        <div class="single-gallery">
+                            <div class="content">
+                                <a href="#" target="_blank">
+                                    <div class="content-overlay"></div>
+                                    <img
+                                            class="content-image img-fluid d-block mx-auto"
+                                            src="{{ data.project_image.url }}"
+                                            alt="{{ data.name }}"
+                                    >
+                                    <div class="content-details fadeIn-bottom">
+                                        <h3 class="content-title mx-auto">{{ data.name }}</h3>
+                                        <a
+                                                href="/project_information/{{ data.id }}"
+                                                class="primary-btn text-uppercase mt-20"
+                                        >
+                                            More Detail
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
                 {% endfor %}
-
             </div>
         </div>
     </section>
+
     <!-- End gallery Area -->
 
     <!-- Start brands Area -->
-    <section class="brands-area pb-60 pt-60">
-        <div class="container no-padding">
-            <div class="brand-wrap">
-                <div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l1.png" alt=""></a>
-                    </div>
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l2.png" alt=""></a>
-                    </div>
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l3.png" alt=""></a>
-                    </div>
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l4.png" alt=""></a>
-                    </div>
-                    <div class="col single-brand">
-                        <a href="#"><img class="mx-auto" src="img/l5.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- End brands Area -->
 
 {% endblock %}

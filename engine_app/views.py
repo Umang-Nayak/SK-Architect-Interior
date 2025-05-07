@@ -5,7 +5,8 @@ from engine_app.models import Feedback, Project
 
 
 def index_page(request):
-    return render(request, "index.html")
+    feedbacks = Feedback.objects.all()
+    return render(request, "index.html", {"feedbacks": feedbacks})
 
 
 def about_us_page(request):
