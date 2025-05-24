@@ -16,9 +16,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from engine_app.views import index_page
+from engine_app.views import *
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('main/', index_page),
+    path('admin/', admin.site.urls, name="admin"),
+    path('', index_page, name="home"),
+    path('about-us/', about_us_page, name="about"),
+    path('project/', project_page, name="project"),
+    path('contact/', contact_page, name="contact"),
+    path('service/', service_page, name="service"),
+    path('create_user_feedback/', submit_user_feedback, name="create_user_feedback"),
+    path('create_contact_details/', submit_user_contact_details, name="create_contact_details"),
+    path('project_information/<int:id>', project_detail_page, name="project_information"),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
