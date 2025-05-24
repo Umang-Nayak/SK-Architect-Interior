@@ -142,3 +142,6 @@ GitHub.sublime-settings
 */migrations/
 */migrations/*.py
 !*/migrations/__init__.py
+
+engine_app/migrations
+engine_app/migrations/
