@@ -66,3 +66,40 @@ def delete_project_image(sender, instance, **kwargs):
     if instance.project_image:
         if os.path.isfile(instance.project_image.path):
             os.remove(instance.project_image.path)
+
+
+class ProjectGallery(Base):
+    project = models.ForeignKey(Project, related_name='gallery', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='engine_app/project_images/')
+    name = models.CharField(max_length=255, null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
+
+    class Meta:
+        db_table = 'project_gallery'
+        verbose_name = 'Project Gallery'
+        verbose_name_plural = 'Project Galleries'
+
+    def __str__(self):
+        return f"{self.id} - {self.name or 'Untitled Image'}"
+
+    def delete(self, *args, **kwargs):
+        if self.image:
+            if os.path.isfile(self.image.path):
+                os.remove(self.image.path)
+        super().delete(*args, **kwargs)
+
+
+class Contact(Base):
+    name = models.TextField(null=True, blank=True)
+    email = models.EmailField(null=True, blank=True)
+    subject = models.TextField(null=True, blank=True)
+    message = models.TextField(null=True, blank=True)
+
+    class Meta:
+        db_table = 'contact'
+        verbose_name = 'Contact'
+        verbose_name_plural = 'Contacts'
+
+    def __str__(self):
+        return f"{self.id} - {self.subject}"
+
